@@ -3,136 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Clothing Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { padding: 20px; }
+        .product { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; width: 200px; text-align: center; }
+        .cart { margin-top: 20px; }
+        .checkout { margin-top: 20px; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Clothing Store</h1>
-        <nav>
-            <ul>
-                <li><a href="#shirts">Shirts</a></li>
-                <li><a href="#jeans">Jeans</a></li>
-                <li><a href="#cart">Shopping Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="shirts">
-            <h2>Shirts</h2>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👕" alt="Shirt 1">
-                <h3>Shirt 1</h3>
-                <p>Price: $5</p>
-                <button>Add to Cart</button>
+    <div class="container">
+        <h1>Shop</h1>
+        <div id="products">
+            <div class="product">
+                <h2>👕 T-Shirt</h2>
+                <button onclick="addToCart('T-Shirt')">Add to Cart</button>
             </div>
-            <!-- Repeat for 8 shirts -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👕" alt="Shirt 2">
-                <h3>Shirt 2</h3>
-                <p>Price: $5</p>
-                <button>Add to Cart</button>
+            <div class="product">
+                <h2>👖 Jeans</h2>
+                <button onclick="addToCart('Jeans')">Add to Cart</button>
             </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👕" alt="Shirt 3">
-                <h3>Shirt 3</h3>
-                <p>Price: $5</p>
-                <button>Add to Cart</button>
+            <div class="product">
+                <h2>👗 Dress</h2>
+                <button onclick="addToCart('Dress')">Add to Cart</button>
             </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👕" alt="Shirt 4">
-                <h3>Shirt 4</h3>
-                <p>Price: $5</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👕" alt="Shirt 5">
-                <h3>Shirt 5</h3>
-                <p>Price: $5</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👕" alt="Shirt 6">
-                <h3>Shirt 6</h3>
-                <p>Price: $5</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👕" alt="Shirt 7">
-                <h3>Shirt 7</h3>
-                <p>Price: $5</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👕" alt="Shirt 8">
-                <h3>Shirt 8</h3>
-                <p>Price: $5</p>
-                <button>Add to Cart</button>
-            </div>
-        </section>
-        <section id="jeans">
-            <h2>Jeans</h2>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👖" alt="Jeans 1">
-                <h3>Jeans 1</h3>
-                <p>Price: $15</p>
-                <button>Add to Cart</button>
-            </div>
-            <!-- Repeat for 8 jeans -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👖" alt="Jeans 2">
-                <h3>Jeans 2</h3>
-                <p>Price: $15</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👖" alt="Jeans 3">
-                <h3>Jeans 3</h3>
-                <p>Price: $15</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👖" alt="Jeans 4">
-                <h3>Jeans 4</h3>
-                <p>Price: $15</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👖" alt="Jeans 5">
-                <h3>Jeans 5</h3>
-                <p>Price: $15</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👖" alt="Jeans 6">
-                <h3>Jeans 6</h3>
-                <p>Price: $15</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👖" alt="Jeans 7">
-                <h3>Jeans 7</h3>
-                <p>Price: $15</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/150?text=👖" alt="Jeans 8">
-                <h3>Jeans 8</h3>
-                <p>Price: $15</p>
-                <button>Add to Cart</button>
-            </div>
-        </section>
-        <section id="cart">
+        </div>
+        <div class="cart">
             <h2>Shopping Cart</h2>
-            <div id="cart-items">
-                <p>No items in the cart.</p>
-            </div>
-            <button id="checkout">Checkout</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 My Clothing Store</p>
-    </footer>
-    <script src="script.js"></script>
+            <ul id="cart-items"></ul>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+    <script>
+        let cart = [];
+        
+        function addToCart(item) {
+            cart.push(item);
+            renderCart();
+        }
+        
+        function removeFromCart(item) {
+            cart = cart.filter(cartItem => cartItem !== item);
+            renderCart();
+        }
+        
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = () => removeFromCart(item);
+                li.appendChild(removeButton);
+                cartItemsContainer.appendChild(li);
+            });
+        }
+        
+        function checkout() {
+            if (cart.length > 0) {
+                alert('Checkout successful!');
+                cart = [];
+                renderCart();
+            } else {
+                alert('Your cart is empty.');
+            }
+        }
+    </script>
 </body>
 </html>
